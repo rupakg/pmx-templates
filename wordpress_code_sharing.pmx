@@ -45,5 +45,5 @@ images:
   - variable: DB_NAME
     value: wordpress
   volumes:
-  - host_path: "/Users/rganguly/src/wordpress/app/wp-content"
+  - host_path: "/home/core/src/wordpress/app/wp-content"
     container_path: "/app/wp-content"
