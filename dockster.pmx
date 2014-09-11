@@ -5,7 +5,7 @@ keywords: lobster
 type: Default
 documentation: "# Lobsters in a container"
 images:
-- name: centurylink_mysql
+- name: rupakg_mysql
   source: rupakg/mysql:latest
   type: Default
   environment:
