@@ -6,8 +6,13 @@ type: Default
 documentation: "# Lobsters in a container"
 images:
 - name: centurylink_mysql
-  source: centurylink/mysql:5.5
+  source: rupakg/mysql:latest
   type: Default
+  environment:
+  - variable: MYSQL_CHARACTER_SET
+    value: utf8mb4
+  - variable: MYSQL_COLLATE
+    value: utf8mb4_unicode_ci
 - name: rupakg_docksters
   source: rupakg/docksters:latest
   type: Default
