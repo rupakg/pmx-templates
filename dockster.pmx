@@ -1,22 +1,25 @@
 ---
-name: Dockster
-description: Lobsters in a container
+name: dockster
+description: Lobster in a container
 keywords: lobster
 type: Default
 documentation: "# Lobsters in a container"
 images:
-- name: docksters_latest
-  source: docksters:latest
-  type: Default
-  environment:
-  - variable: DB_PORT
-    value: '3306'
-  - variable: DB_NAME
-    value: dockster
-  - variable: DB_USER
-    value: root
-  - variable: DB_PASSWORD
-    value: "''"
 - name: centurylink_mysql
   source: centurylink/mysql:5.5
   type: Default
+- name: rupakg_docksters
+  source: rupakg/docksters:latest
+  type: Default
+  ports:
+  - host_port: '3306'
+    container_port: '3306'
+    proto: TCP
+  links:
+  - service: centurylink_mysql
+    alias: MYSQL
+  environment:
+  - variable: DB_NAME
+    value: docksters
+  - variable: DB_USER
+    value: root
