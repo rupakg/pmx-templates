@@ -6,7 +6,7 @@ type: Default
 documentation: "# Lobsters in a container"
 images:
 - name: rupakg_mysql
-  source: rupakg/mysql:5.5
+  source: rupakg/docker-mysql:5.5
   type: Default
   environment:
   - variable: MYSQL_CHARACTER_SET
