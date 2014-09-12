@@ -1,7 +1,7 @@
 ---
 name: dockster2
 description: ''
-keywords: lobsters
+keywords: ''
 type: Default
 documentation: "# Dockster"
 images:
@@ -9,7 +9,7 @@ images:
   source: rupakg/docksters:latest
   type: Default
   ports:
-  - host_port: '9999'
+  - host_port: '4000'
     container_port: '4000'
     proto: TCP
   links:
