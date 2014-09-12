@@ -36,10 +36,9 @@ images:
   source: leodido/sphinxsearch:latest
   type: Default
   ports:
-  - host_port: '9306'
-    container_port: '9306'
+  - host_port: '9313'
+    container_port: '9313'
     proto: TCP
   volumes:
   - host_path: "/var/sphinx"
     container_path: "/usr/local/etc"
-  command: "./searchd.sh"
