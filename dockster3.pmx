@@ -1,0 +1,42 @@
+---
+name: dockster3
+description: with sphinx server
+keywords: ''
+type: Default
+documentation: "# Dockster"
+images:
+- name: rupakg_docksters_latest
+  source: rupakg/docksters:latest
+  type: Default
+  ports:
+  - host_port: '4000'
+    container_port: '4000'
+    proto: TCP
+  links:
+  - service: rupakg_docker-mysql
+    alias: MYSQL
+  environment:
+  - variable: DB_NAME
+    value: docksters
+  - variable: DB_USER
+    value: root
+- name: rupakg_docker-mysql
+  source: rupakg/docker-mysql:5.5
+  type: Default
+  ports:
+  - host_port: '3306'
+    container_port: '3306'
+    proto: TCP
+  environment:
+  - variable: MYSQL_CHARACTER_SET
+    value: utf8mb4
+  - variable: MYSQL_COLLATE
+    value: utf8mb4_unicode_ci
+- name: leodido_sphinxsearch
+  source: leodido/sphinxsearch:latest
+  type: Default
+  ports:
+  - host_port: '9312'
+    container_port: '9312'
+    proto: TCP
+  command: "./searchd.sh"
