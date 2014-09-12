@@ -10,7 +10,7 @@ images:
   type: Default
   ports:
   - host_port: '9999'
-    container_port: '3000'
+    container_port: '4000'
     proto: TCP
   links:
   - service: rupakg_docker-mysql
