@@ -43,3 +43,11 @@ images:
   environment:
   - variable: MYSQL_ROOT_PASSWORD
     value: pass@word01
+- name: mysql_data
+  source: busybox:latest
+  category: DB Tier
+  type: Default
+  volumes:
+  - host_path: ''
+    container_path: "/var/lib/mysql"
+  command: top
