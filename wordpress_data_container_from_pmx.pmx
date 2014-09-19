@@ -1,6 +1,6 @@
 ---
 name: wordpress_data_container_from_pmx
-description: from pmx save template with data container
+description: from pmx create a template with data container using volumes_from
 keywords: ''
 type: Wordpress
 documentation: |
@@ -43,6 +43,8 @@ images:
   environment:
   - variable: MYSQL_ROOT_PASSWORD
     value: pass@word01
+  volumes_from:
+  - container_name: mysql_data
 - name: mysql_data
   source: busybox:latest
   category: DB Tier
