@@ -44,7 +44,7 @@ images:
   - variable: MYSQL_ROOT_PASSWORD
     value: pass@word01
   volumes_from:
-  - container_name: mysql_data  
+  - service: mysql_data  
 - name: mysql_data
   source: busybox:latest
   category: DB Tier
