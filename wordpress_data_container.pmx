@@ -52,4 +52,3 @@ images:
   volumes:
   - host_path: ''
     container_path: "/var/lib/mysql"
-  command: top
