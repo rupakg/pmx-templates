@@ -46,7 +46,7 @@ images:
   volumes_from:
   - service: mysql_data  
 - name: mysql_data
-  source: busybox:latest
+  source: centurylink/data-container:1.0
   category: DB Tier
   type: Default
   volumes:
