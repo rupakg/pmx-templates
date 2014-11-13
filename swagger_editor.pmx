@@ -1,0 +1,18 @@
+---
+name: Swagger Editor
+description: "Swagger Editor that allows you to spec out an API\r\n\r\nExposes port
+  9000"
+keywords: swagger, api
+type: NodeJS
+documentation: |-
+  Swagger Editor that allows you to spec out an API
+
+  Exposes port 9000
+images:
+- name: marcellodesales_swagger-editor_2.0-spec
+  source: marcellodesales/swagger-editor:2.0-spec
+  type: Default
+  ports:
+  - host_port: '9000'
+    container_port: '9000'
+    proto: TCP
