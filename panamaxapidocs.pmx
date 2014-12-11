@@ -1,0 +1,20 @@
+---
+name: PanamaxAPIDocs
+description: Panamax API Documentation
+keywords: panamax, api, documentation
+type: Default
+documentation: |-
+  Panamax API Documentation
+  ======================
+
+  This application enables visualization of the Panamax API Docs via the Swagger UI. Point your browser to http://localhost:8000, and then change the location of the spec json file to match the domain portion.
+
+  Enjoy!
+images:
+- name: panamax-api-docs
+  source: centurylink/panamax-api-docs:latest
+  type: Default
+  ports:
+  - host_port: '8000'
+    container_port: '80'
+    proto: TCP
