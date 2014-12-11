@@ -1,15 +1,18 @@
 ---
 name: Swagger Editor
-description: "Swagger Editor that allows you to spec out an API\r\n\r\nExposes port
-  9000"
+description: Swagger Editor for creating Swagger API spec. files that can be visualized
+  by Swagger UI
 keywords: swagger, api
-type: NodeJS
+type: Default
 documentation: |-
-  Swagger Editor that allows you to spec out an API
+  Swagger Editor
+  ============
 
-  Exposes port 9000
+  Swagger Editor, for creating Swagger API spec. files that can be visualized by Swagger UI.
+
+  Exposes port 9000.
 images:
-- name: marcellodesales_swagger-editor_2.0-spec
+- name: swagger-editor_2.0
   source: marcellodesales/swagger-editor:2.0-spec
   type: Default
   ports:
