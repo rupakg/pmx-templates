@@ -1,6 +1,6 @@
 ---
 name: Grafana-InfluxDB-ElasticSearch
-description: Revised template
+description: Revised template using updated grafana image
 keywords: grafana, influxdb, elasticsearch
 type: Default
 documentation: |
@@ -97,7 +97,7 @@ images:
   - host_port: '9200'
     container_port: '9200'
 - name: Grafana
-  source: tutum/grafana
+  source: rupakg/tutum-docker-grafana
   type: Default
   expose:
   - '80'
