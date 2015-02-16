@@ -116,12 +116,10 @@ images:
   environment:
   - variable: HTTP_USER
     value: admin
-  - variable: INFLUXDB_NAME
-    value: rgdata
-  - variable: INFLUXDB_IS_GRAFANADB
-    value: 'true'
   - variable: HTTP_PASS
     value: admin
+  - variable: INFLUXDB_NAME
+    value: rgdata
   - variable: INFLUXDB_PROTO
     value: http
   - variable: INFLUXDB_USER
